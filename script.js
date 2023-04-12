@@ -26,7 +26,7 @@ function initializeGame() {
   gameDetails.style.display = "none";
   gameBoard.style.display = "flex";
 
-  displayMessage(`${player1Name}, it's your turn`);
+  displayMessage(`${player1Name}, you're up`);
 
   for (let i = 1; i <= 9; i++) {
     const slot = document.createElement("div");
@@ -42,9 +42,9 @@ function initializeGame() {
 
         if(!winner){
           switchPlayer();
-          displayMessage(`${activePlayer === 0 ? player1Name : player2Name}, it's your turn`);
+          displayMessage(`${activePlayer === 0 ? player1Name : player2Name}, you're up`);
         }else{
-          displayMessage(`${activePlayer===0 ? player1Name : player2Name} wins!`);
+          displayMessage(`${activePlayer===0 ? player1Name : player2Name} congratulations you won!.`);
         }
       }
     });
